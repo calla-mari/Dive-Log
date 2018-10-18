@@ -1,6 +1,7 @@
 #!/bin/bash
 
 curl "http://localhost:4741/sign-up" \
+# curl "http://dive-log-server.herokuapp.com/sign-up" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

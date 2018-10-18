@@ -1,6 +1,7 @@
 #!/bin/bash
 
 curl "http://localhost:4741/sign-out" \
+# curl "http://dive-log-server.herokuapp.com/sign-out" \
   --include \
   --request DELETE \
   --header "Content-Type: application/json" \
