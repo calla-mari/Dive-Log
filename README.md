@@ -1,1 +1,1 @@
-Dive Log Application
+Dive Log Application Server
