@@ -1,4 +1,4 @@
-class DivelogsController < ProtectedController
+class DivelogsController < OpenReadController
   before_action :set_divelog, only: %i[update destroy]
 
   # GET /divelogs
