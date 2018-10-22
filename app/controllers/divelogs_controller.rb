@@ -15,6 +15,7 @@ class DivelogsController < OpenReadController
 
   # POST /divelogs
   def create
+    puts divelog_params
     @divelog = current_user.divelogs.build(divelog_params)
 
     if @divelog.save
@@ -36,16 +37,19 @@ class DivelogsController < OpenReadController
   # DELETE /divelogs/1
   def destroy
     @divelog.destroy
+
+    head :no_content
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_divelog
-      @divelog = current_user.divelogs.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_divelog
+    @divelog = current_user.divelogs.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def divelog_params
-      params.require(:divelog).permit(:city, :country)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def divelog_params
+    params.require(:divelog).permit(:city, :country)
+  end
+
+  private :set_divelog, :divelog_params
 end
