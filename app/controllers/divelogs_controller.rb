@@ -48,7 +48,7 @@ class DivelogsController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def divelog_params
-    params.require(:divelog).permit(:city, :country)
+    params.require(:divelog).permit(:city, :country, :site, :date, :time)
   end
 
   private :set_divelog, :divelog_params

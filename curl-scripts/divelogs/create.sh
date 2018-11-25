@@ -6,7 +6,10 @@ curl --include --request POST 'http://localhost:4741/divelogs' \
   --data '{
     "divelog": {
       "city": "'"${CITY}"'",
-      "country": "'"${COUNTRY}"'"
+      "country": "'"${COUNTRY}"'",
+      "site": "'"${SITE}"'",
+      "date": "'"${DATE}"'",
+      "time": "'"${TIME}"'"
     }
   }'
 

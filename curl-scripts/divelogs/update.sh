@@ -5,7 +5,10 @@ curl --include --request PATCH "http://localhost:4741/divelogs/${ID}" \
   --data '{
     "divelog": {
       "city": "'"${CITY}"'",
-      "country": "'"${COUNTRY}"'"
+      "country": "'"${COUNTRY}"'",
+      "site": "'"${SITE}"'",
+      "date": "'"${DATE}"'",
+      "time": "'"${TIME}"'"
     }
   }'
 
